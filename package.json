@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/poshaughnessy/cryptography-tests/issues"
   },
-  "homepage": "https://github.com/poshaughnessy/cryptography-tests#readme"
+  "homepage": "https://github.com/poshaughnessy/cryptography-tests#readme",
+  "dependencies": {
+    "node-forge": "^0.6.38"
+  }
 }
