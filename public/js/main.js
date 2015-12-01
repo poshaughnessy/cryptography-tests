@@ -1,19 +1,20 @@
 (function() {
 
-  var input = document.getElementById('input-text');
+  var keyInput = document.getElementById('input-key');
+  var messageInput = document.getElementById('input-message');
   var submitBtn = document.getElementById('submit');
   var hashResult = document.getElementById('hash-result');
 
   var hmac = forge.hmac.create();
 
-  // Second parameter is the 'key' to use
-  hmac.start('sha1', '6708435794321');
-
   submitBtn.onclick = function() {
 
-    var text = input.value;
+    var key = keyInput.value;
+    var message = messageInput.value;
 
-    hmac.update(text);
+    hmac.start('sha1', key);
+
+    hmac.update(message);
 
     hashResult.innerHTML = hmac.digest().toHex();
 

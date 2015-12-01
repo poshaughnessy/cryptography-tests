@@ -6,13 +6,25 @@
     <script src="../node_modules/node-forge/js/md.js"></script>
     <script src="../node_modules/node-forge/js/sha1.js"></script>
     <script src="../node_modules/node-forge/js/hmac.js"></script>
+    <style>
+      html {
+        font-family: helvetica, arial, sans-serif;
+      }
+      input, button {
+        font-size: 1.1em;
+      }
+      #hash-result {
+        margin-top: 1em;
+      }
+    </style>
   </head>
   <body>
     <h1>Cryptography tests</h1>
 
-    <h2>SHA-1</h2>
+    <h2>HMAC SHA-1</h2>
 
-    <input id="input-text" type="text" placeholder="Type something here">
+    <input id="input-key" type="text" placeholder="Key">
+    <input id="input-message" type="text" placeholder="Message">
     <button id="submit">Hash me</button>
 
     <div id="hash-result"></div>
