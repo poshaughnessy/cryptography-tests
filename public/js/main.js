@@ -2,14 +2,21 @@
 
   var input = document.getElementById('input-text');
   var submitBtn = document.getElementById('submit');
+  var hashResult = document.getElementById('hash-result');
 
   var hmac = forge.hmac.create();
-  hmac.start('sha1', 'Jefe');
 
-  hmac.update('this is some test input for now');
+  // Second parameter is the 'key' to use
+  hmac.start('sha1', '6708435794321');
 
-  var output = hmac.digest().toHex();
+  submitBtn.onclick = function() {
 
-  console.log('HMAC output', output);
+    var text = input.value;
+
+    hmac.update(text);
+
+    hashResult.innerHTML = hmac.digest().toHex();
+
+  };
 
 })();
