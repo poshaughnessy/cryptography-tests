@@ -4,7 +4,11 @@
   "description": "Trying out some hashing algorithms",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,7 @@
   },
   "homepage": "https://github.com/poshaughnessy/cryptography-tests#readme",
   "dependencies": {
+    "express": "^4.13.3",
     "node-forge": "^0.6.38"
   }
 }
